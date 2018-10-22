@@ -1,0 +1,45 @@
+{
+  "name": "mysql-express-node-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node index.js",
+    "serve": "node build/server.js",
+    "buildindex": "babel index.js --out-file build/server.js",
+    "buildsrc": "babel src --out-dir build/src",
+    "build": "npm run buildindex && npm run buildsrc"
+  },
+  "engines": {
+    "node": "8.11.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emmanuelnwogbo/mysql-express-node-boilerplate.git"
+  },
+  "author": "Emmanuel <emmanwogbo20@yahoo.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/emmanuelnwogbo/mysql-express-node-boilerplate/issues"
+  },
+  "homepage": "https://github.com/emmanuelnwogbo/mysql-express-node-boilerplate#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.3",
+    "crypto-js": "^3.1.9-1",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.3.0",
+    "lodash": "^4.17.11",
+    "mysql": "^2.16.0",
+    "validator": "^10.8.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/node": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
+    "faker": "^4.1.0",
+    "nodemon": "^1.18.4"
+  }
+}
