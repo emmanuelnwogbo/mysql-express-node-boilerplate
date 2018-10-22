@@ -19,14 +19,13 @@ const app = (0, _express.default)();
 
 const server = _http.default.createServer(app);
 
-const port = 3000;
+const PORT = 3000;
 app.use(_bodyParser.default.json());
 app.use((0, _cookieParser.default)());
 app.get('/', (req, res) => {
-  console.log(req);
   res.send('hello');
 });
-server.listen(port);
+server.listen(process.env.PORT || PORT);
 server.on('error', function () {
   console.log('error');
 });

@@ -12,7 +12,6 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 
 app.get('/', (req, res) => {
-  console.log(req)
   res.send('hello')
 })
 
