@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --exec babel-node index.js",
-    "serve": "node build/server.js",
+    "dev": "nodemon --exec babel-node index.js",
+    "start": "node build/server.js",
     "buildindex": "babel index.js --out-file build/server.js",
     "buildsrc": "babel src --out-dir build/src",
     "build": "npm run buildindex && npm run buildsrc"
