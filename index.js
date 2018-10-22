@@ -6,7 +6,7 @@ import cookieParser from 'cookie-parser';
 
 const app = express();
 const server = http.createServer(app);
-const port = 3000;
+const PORT = 3000;
 
 app.use(bodyParser.json());
 app.use(cookieParser());
@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
   res.send('hello')
 })
 
-server.listen(port);
+server.listen(process.env.PORT || PORT);
 
 server.on('error', function () {
   console.log('error')
