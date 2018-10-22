@@ -29,7 +29,7 @@ connection.connect(function (err) {
 
 const app = express();
 const server = http.createServer(app);
-const PORT = 3000;
+const PORT = process.env.PORT;
 
 app.use(bodyParser.json());
 app.use(cookieParser());
@@ -38,14 +38,14 @@ app.get('/', (req, res) => {
   res.send('hello')
 })
 
-server.listen(process.env.PORT || PORT);
+server.listen(PORT);
 
 server.on('error', function () {
   console.log('error')
 });
 
 server.on('listening', function () {
-  console.log('listening')
+  console.log(`listening on ${PORT}`)
 });
 
 export default app;
