@@ -43,18 +43,18 @@ const app = (0, _express.default)();
 
 const server = _http.default.createServer(app);
 
-const PORT = 3000;
+const PORT = process.env.PORT;
 app.use(_bodyParser.default.json());
 app.use((0, _cookieParser.default)());
 app.get('/', (req, res) => {
   res.send('hello');
 });
-server.listen(process.env.PORT || PORT);
+server.listen(PORT);
 server.on('error', function () {
   console.log('error');
 });
 server.on('listening', function () {
-  console.log('listening');
+  console.log(`listening on ${PORT}`);
 });
 var _default = app;
 exports.default = _default;

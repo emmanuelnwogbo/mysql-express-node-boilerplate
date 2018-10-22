@@ -17,7 +17,7 @@
     "type": "git",
     "url": "git+https://github.com/emmanuelnwogbo/mysql-express-node-boilerplate.git"
   },
-  "author": "Emmanuel <emmanwogbo20@yahoo.com>",
+  "author": "Emmanuel Nwogbo <nerdyemmanuel@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/emmanuelnwogbo/mysql-express-node-boilerplate/issues"
